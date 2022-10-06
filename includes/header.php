@@ -15,18 +15,7 @@ $SessioStoredUsername = !empty($_SESSION["webTvplayer"]["username"]) ? $_SESSION
 if (substr($XCStreamHostUrl, -1) == "/") {
     $bar = "";
 }
-if ($configFileCheck["result"] == "success") {
-    if ($configFileCheck["permission"] == "0777" || $configFileCheck["permission"] == "0755") {
-        require "configuration.php";
-    } else {
-        require "configuration.php";
-    }
-} else {
-    if (!file_exists("configuration.php")) {
-        $my_file = "configuration.php";
-        $handle = fopen($my_file, "w") or exit("Cannot open file:  " . $my_file);
-    }
-}
+require "configuration.php";
 if (!isset($_SESSION["webTvplayer"]) && empty($_SESSION["webTvplayer"]) && $activePage !== "index") {
     echo "<script>window.location.href = 'index.php';</script>";
     exit;
