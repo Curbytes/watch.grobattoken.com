@@ -1,13 +1,3 @@
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f90000">
-<meta name="apple-mobile-web-app-title" content="M.E Webplayer">
-<meta name="application-name" content="M.E Webplayer">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-
 <?php
 /*
  * @ PHP 5.6
@@ -54,7 +44,7 @@ if ($numRows === 1){
 	}
 else{
 	echo "<div class=\"form-group\">";
-	echo "	<label>Select Portal</label>";
+	echo "	<label>Select Service</label>";
 	echo "	<select class=\"form-control logininputs\" id=\"input-server\"";
 	echo ">";
 	while ($rowb = $res->fetchArray(SQLITE3_ASSOC)) {
