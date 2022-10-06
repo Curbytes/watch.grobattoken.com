@@ -84,27 +84,20 @@ if ($activePage !== "index" && $activePage !== "dashboard") {
         echo " \r\n              <li class=\"r-li\"><a href=\"#search\"><i class=\"fa fa-search\"></i><span class=\"r-show\"></span></a></li>\r\n              <li class=\"r-li\"><a href=\"#sort\" data-toggle=\"modal\" data-target=\"#sortingpopup\"><i class=\"fa fa-sort\"></i><span class=\"r-show\"></span></a></li>\r\n\r\n             ";
     }
     echo "          <li class=\"r-li ";
-    // if ($activePage == "settings") {
-    //     echo "active";
-    // }
-    // echo "\"><a href=\"settings.php\"><i class=\"fa fa-gear\"></i><span class=\"r-show\"></span></a></li>\r\n          ";
+    if ($activePage == "settings") {
+        echo "active";
+    }
+    echo "\"><a href=\"settings.php\"><i class=\"fa fa-gear\"></i><span class=\"r-show\"></span></a></li>\r\n          ";
     if ($activePage !== "dashboard" && $activePage !== "settings") {
-        echo " \r\n\r\n<li class=\"r-li\"></li>\r\n";
+        echo " \r\n\r\n          <li class=\"r-li\"><a href=\"#\"\" class=\"logoutBtn\"><i class=\"fa fa-sign-out\"></i><span class=\"r-show\">Logout</span></a></li>\r\n        ";
     }
     echo "        </ul>\r\n      ";
 } else {
- //    echo "          <ul class=\"nav navbar-nav navbar-right r-icon\">
-	// \r\n            <li><a href=\"note.php\"><i class=\"fa fa-comment\"></i><span class=\"r-show\"></span></a></li>\r\n
-	// \r\n            <li><a href=\"settings.php\"><i class=\"fa fa-gear\"></i><span class=\"r-show\"></span></a></li>\r\n 
-	// <li class=\"r-li\"><a href=\"#\"\" class=\"logoutBtn\"><i class=\"fa fa-sign-out\"></i><span class=\"r-show\">Logout</span></a></li>\r\n
-	// </ul>\r\n          <p class=\"datetime\" style=\"margin-right: 20px;\"><span class=\"time\"></span>  <span class=\"date\"> ";
- //    echo date("d-M-Y");
- //    echo "</span></p>\r\n\r\n\r\n        ";
-
-    echo "<ul class=\"nav navbar-nav navbar-right r-icon\">";
-    echo "<li class=\"r-li\"><p class=\"datetime\" style=\"margin:0px 20px;\" id='wallet_address'>--------</p></li>";
-    // echo "<li class=\"r-li\"><a href=\"#\"\" class=\"logoutBtn\"><i class=\"fa fa-sign-out\"></i><span class=\"r-show\">Logout</span></a></li>";
-    echo "</ul>\r\n<p class=\"datetime\" style=\"margin-right: 20px;\"><span class=\"time\"></span>  <span class=\"date\"> ";
+    echo "          <ul class=\"nav navbar-nav navbar-right r-icon\">
+    \r\n            <li><a href=\"note.php\"><i class=\"fa fa-comment\"></i><span class=\"r-show\"></span></a></li>\r\n
+    \r\n            <li><a href=\"settings.php\"><i class=\"fa fa-gear\"></i><span class=\"r-show\"></span></a></li>\r\n 
+    <li class=\"r-li\"><a href=\"#\"\" class=\"logoutBtn\"><i class=\"fa fa-sign-out\"></i><span class=\"r-show\">Logout</span></a></li>\r\n
+    </ul>\r\n          <p class=\"datetime\" style=\"margin-right: 20px;\"><span class=\"time\"></span>  <span class=\"date\"> ";
     echo date("d-M-Y");
     echo "</span></p>\r\n\r\n\r\n        ";
 }
