@@ -27,33 +27,7 @@ $rows = $db->query("SELECT COUNT(*) as count FROM dns");
 $row = $rows->fetchArray();
 $numRows = $row['count'];
 
-if ($numRows === 0){
-	echo "<div class=\"form-group\">";
-	echo "	<select class=\"form-control logininputs\" id=\"input-server\"";
-	echo "style=\"display:none\">";
-	echo "<option value=\"\"></option>";
-	echo "</select></div> ";
-	}
-if ($numRows === 1){
-	echo "<div class=\"form-group\">";
-	echo "	<select class=\"form-control logininputs\" id=\"input-server\"";
-	$rowb = $res->fetchArray(SQLITE3_ASSOC);
-	echo "style=\"display:none\">";
-	echo "<option value=\"{$rowb['url']}\"></option>";
-	echo "</select></div> ";
-	}
-else{
-	echo "<div class=\"form-group\">";
-	echo "	<label>Select Service</label>";
-	echo "	<select class=\"form-control logininputs\" id=\"input-server\"";
-	echo ">";
-	while ($rowb = $res->fetchArray(SQLITE3_ASSOC)) {
-		echo "<option value=\"{$rowb['url']}\">";
-		echo $rowb['title'];
-		echo "</option>";
-		}
-	echo "</select></div> ";
-	}
+
 echo $Finalserver;
 echo"	<div class=\"form-group\">\r\n                <label>Username</label>\r\n                <input type=\"username\" class=\"form-control logininputs\" id=\"input-login\" placeholder=\"Username\" value=\"";
 echo $FinalUsername;
