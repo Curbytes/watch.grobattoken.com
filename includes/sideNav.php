@@ -1,3 +1,4 @@
+
 <?php
 /*
  * @ PHP 5.6
@@ -59,18 +60,18 @@ if ($activePage !== "index" && $activePage !== "dashboard") {
     if ($activePage == "movies") {
         echo "active";
     }
-    echo "\"><a href=\"movies.php\"><span class=\"da movie\"></span><span>Movies</span></a></li>\r\n          <li class=\"";
-    if ($activePage == "series") {
-        echo "active";
-    }
-    echo "\" ><a href=\"series.php\"><span class=\"da tv\"></span><span>Tv series</span></a></li>\r\n          <li class=\"";
-    if ($activePage == "radio") {
-        echo "active";
-    }
-    echo "\"><a href=\"fixtures.php\"><span class=\"da catchup\"></span><span>Fixtures</span></a></li>\r\n          <!-- <li class=\"";
-    if ($activePage == "fixtures") {
-        echo "active";
-    }
+    #echo "\"><a href=\"movies.php\"><span class=\"da movie\"></span><span>Movies</span></a></li>\r\n          <li class=\"";
+    #if ($activePage == "series") {
+    #    echo "active";
+    #}
+    #echo "\" ><a href=\"series.php\"><span class=\"da tv\"></span><span>Tv series</span></a></li>\r\n          <li class=\"";
+    #if ($activePage == "radio") {
+    #    echo "active";
+    #}
+    #echo "\"><a href=\"fixtures.php\"><span class=\"da catchup\"></span><span>Fixtures</span></a></li>\r\n          <!-- <li class=\"";
+    #if ($activePage == "fixtures") {
+    #    echo "active";
+    #}
     echo "\" ><a href=\"radio.php\"><span class=\"da radio\"></span><span>Radio</span></a></li>\r\n          <li class=\"";
     if ($activePage == "catchup") {
         echo "active";

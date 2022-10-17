@@ -22,7 +22,7 @@
 
 /*
 
- * @ PHP 5.6
+* @ PHP 5.6
 
  * @ Decoder version : 1.0.0.1
 
@@ -214,11 +214,11 @@ echo "
 
    
 
-   <div class=\"col-md-4 col-sm-4 col-xs-12\">
+   <!-- <div class=\"col-md-4 col-sm-4 col-xs-12\">
 
       <a class=\"center-block mov\" href=\"movies.php\"></a>
 
-   </div>
+  </div>
 
    
 
@@ -226,8 +226,7 @@ echo "
 
       <a class=\"center-block ser\" href=\"series.php\"></a>
 
-   </div>
-
+  </div>  -->
 </div>
 
 
