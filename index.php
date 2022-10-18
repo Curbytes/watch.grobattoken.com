@@ -9,7 +9,7 @@
 ?>
 <div class="container" style="height: 100vh;display: grid;">
     <center>
-        <img class="img-responsive" src="images/logo.png" alt="" onerror="this.src='img/logo.png';" width="200px" style="margin-top: 40px;">
+        <img class="img-responsive mb-5" src="images/logo.png" alt="" width="200px" style="margin-top: 40px;">
 
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading">Welcome to DogeTV live stream</h4>
