@@ -3,7 +3,7 @@ const NFTADDRESS = "0x4A58B95963E6E3002ADBE019b163ebA842275C32";
 
 const TOKEN_SYMBOL = '$DTV'
 const internationalNumberFormat = new Intl.NumberFormat('en-US')
-const min_token = 1000000;
+const min_token = 10000;
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
@@ -45,7 +45,7 @@ async function fetchAccountData() {
 
   selectedAccount = accounts[0];
 
-  if(chainId != 1 || chainId != 5){
+  if(chainId != 1 && chainId != 5){
     swal({
       title: "Invalid Network!",
       text: "Please connect to Ethereum Mainnet to continue.",
