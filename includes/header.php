@@ -5,6 +5,8 @@
  */
 
 session_start();
+header("Access-Control-Allow-Origin: *");
+
 include_once "includes/functions.php";
 $checkLicense = "";
 $bar = "/";
