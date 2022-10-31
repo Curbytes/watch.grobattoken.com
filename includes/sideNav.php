@@ -60,10 +60,10 @@ if ($activePage !== "index" && $activePage !== "dashboard") {
     if ($activePage == "movies") {
         echo "active";
     }
-    echo "\"><a href=\"movies.php\"><span class=\"da movie\"></span><span>Movies</span></a></li>\r\n          <li class=\"";
-    if ($activePage == "series") {
-       echo "active";
-    }
+    #echo "\"><a href=\"movies.php\"><span class=\"da movie\"></span><span>Movies</span></a></li>\r\n          <li class=\"";
+    #if ($activePage == "series") {
+    #    echo "active";
+    #}
     #echo "\" ><a href=\"series.php\"><span class=\"da tv\"></span><span>Tv series</span></a></li>\r\n          <li class=\"";
     #if ($activePage == "radio") {
     #    echo "active";

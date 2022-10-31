@@ -206,7 +206,7 @@ echo "
 
 <div class=\"home col-md-12 col-sm-12 col-xs-12\">
 
-   <div class=\"col-md-offset-2 col-md-4 col-sm-4 col-xs-12\">
+   <div class=\"col-md-offset-4 col-md-4 col-sm-4 col-xs-12\">
 
      <a class=\"center-block ltv\" href=\"live.php\"></a>
 
@@ -214,7 +214,7 @@ echo "
 
    
 
-   <div class=\"col-md-4 col-sm-4 col-xs-12\">
+   <!-- <div class=\"col-md-4 col-sm-4 col-xs-12\">
 
       <a class=\"center-block mov\" href=\"movies.php\"></a>
 
@@ -222,7 +222,7 @@ echo "
 
    
 
-   <!-- <div class=\"col-md-4 col-sm-4 col-xs-12\">
+   <div class=\"col-md-4 col-sm-4 col-xs-12\">
 
       <a class=\"center-block ser\" href=\"series.php\"></a>
 
