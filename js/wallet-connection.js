@@ -3,7 +3,7 @@ const NFTADDRESS = "0xfeb6d5238ed8f1d59dcab2db381aa948e625966d";
 
 const TOKEN_SYMBOL = '$DGTV'
 const internationalNumberFormat = new Intl.NumberFormat('en-US')
-const min_token = 1;
+const min_token = 500;
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
