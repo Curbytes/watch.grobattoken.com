@@ -26,7 +26,7 @@ function init() {
   web3Modal = new Web3Modal({
     network: "mainnet",
     theme: "dark",
-    cacheProvider: false, // optional
+    cacheProvider: true, // optional
     disableInjectedProvider: false,
     providerOptions, // required
   });
