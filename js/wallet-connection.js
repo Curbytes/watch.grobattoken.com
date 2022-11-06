@@ -3,7 +3,7 @@ const NFTADDRESS = "0xfeb6d5238ed8f1d59dcab2db381aa948e625966d";
 
 const TOKEN_SYMBOL = '$DGTV'
 const internationalNumberFormat = new Intl.NumberFormat('en-US')
-const min_token = 500;
+const min_token = 200;
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
@@ -15,18 +15,21 @@ let selectedAccount;
 
 function init() {
   var providerOptions = {
-    // walletconnect: {
-    //   package: WalletConnectProvider,
-    //   options: {
-    //     infuraId: "0a8c43124e91442c9bb1c470499f2dc0",
-    //   }
-    // }
+    walletconnect: {
+      package: WalletConnectProvider,
+      options: {
+        rpc: {
+          56: "https://bsc-dataseed.binance.org",
+        },
+        network: 'binance'
+      }
+    }
   };
 
   web3Modal = new Web3Modal({
     network: "mainnet",
     theme: "dark",
-    cacheProvider: true, // optional
+    cacheProvider: false, // optional
     providerOptions, // required
   });
   $("#min_token").html(internationalNumberFormat.format(min_token))
