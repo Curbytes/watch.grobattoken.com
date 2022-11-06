@@ -27,9 +27,9 @@ function init() {
     network: "mainnet",
     theme: "dark",
     cacheProvider: true, // optional
-    disableInjectedProvider: false,
     providerOptions, // required
   });
+
   $("#min_token").html(internationalNumberFormat.format(min_token))
 }
 
