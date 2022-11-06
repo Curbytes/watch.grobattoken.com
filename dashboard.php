@@ -126,8 +126,6 @@ echo "
 
 .acc {
 
-   background-image: url(./img/account_background.png); 
-
     width: 300;
 
    height: 200px;
@@ -144,15 +142,12 @@ echo "
 
 {
 
-   background-image: url(./img/account_focused.png); 
 
 }
 
 
 
 .sit {
-
-   background-image: url(./img/site_background.png); 
 
     width: 300;
 
@@ -170,15 +165,11 @@ echo "
 
 {
 
-   background-image: url(./img/site_focused.png); 
-
 }
 
 
 
 .log {
-
-   background-image: url(./img/logout_background.png); 
 
     width: 300;
 

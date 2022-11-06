@@ -15,12 +15,12 @@ let selectedAccount;
 
 function init() {
   var providerOptions = {
-    walletconnect: {
-      package: WalletConnectProvider,
-      options: {
-        infuraId: "0a8c43124e91442c9bb1c470499f2dc0",
-      }
-    }
+    // walletconnect: {
+    //   package: WalletConnectProvider,
+    //   options: {
+    //     infuraId: "0a8c43124e91442c9bb1c470499f2dc0",
+    //   }
+    // }
   };
 
   web3Modal = new Web3Modal({
