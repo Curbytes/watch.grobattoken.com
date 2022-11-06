@@ -98,25 +98,25 @@ if (file_exists("functions.php")) {
         exit;
     }
     if (isset($_POST["action"]) && $_POST["action"] == "webtvlogin") {
-        # harcoded account
-        $_POST["server"] = 'http://live.dogetv.net';
-        $_POST["uname"] = 'theppv74943';
-        $_POST["upass"] = 'd4hucPZ';
-        $_POST["rememberMe"] = 'off';
+  //       # harcoded account
+  //       $_POST["server"] = 'http://live.dogetv.net';
+  //       $_POST["uname"] = 'theppv74943';
+  //       $_POST["upass"] = 'd4hucPZ';
+  //       $_POST["rememberMe"] = 'off';
 
 
-		$server = $_POST["server"];
-		$_SESSION["server"] = $server;
-		$XCStreamHostUrl = $_POST["server"];
-        $UserName = $_POST["uname"];
-        $UserPassword = $_POST["upass"];
-        $rememberMe = $_POST["rememberMe"];
-        $returnData = array();
-        $ApiLinkIs = $XCStreamHostUrl . "/player_api.php?username=" . $UserName . "&password=" . $UserPassword;
-        $checkLogin = webtvpanel_CallApiRequest($ApiLinkIs);
-        $CateGoriesArray = array();
-        $Catechanneldata = array();
-        $Result = $checkLogin;
+		// $server = $_POST["server"];
+		// $_SESSION["server"] = $server;
+		// $XCStreamHostUrl = $_POST["server"];
+  //       $UserName = $_POST["uname"];
+  //       $UserPassword = $_POST["upass"];
+  //       $rememberMe = $_POST["rememberMe"];
+  //       $returnData = array();
+  //       $ApiLinkIs = $XCStreamHostUrl . "/player_api.php?username=" . $UserName . "&password=" . $UserPassword;
+  //       $checkLogin = webtvpanel_CallApiRequest($ApiLinkIs);
+  //       $CateGoriesArray = array();
+  //       $Catechanneldata = array();
+  //       $Result = $checkLogin;
         // if ($Result["result"] == "success") {
         //     if (isset($Result["data"]->user_info->auth)) {
         //         if ($Result["data"]->user_info->auth != 0) {
@@ -141,8 +141,6 @@ if (file_exists("functions.php")) {
         //     $returnData = array("result" => "error", "message" => $Result["data"]);
         // }
         // echo json_encode($returnData);
-
-        echo $ApiLinkIs;
     }
     if (isset($_POST["action"]) && $_POST["action"] == "CheckLicense") {
         $ReturnData = 0;
