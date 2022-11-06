@@ -18,7 +18,10 @@ function init() {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-        infuraId: "0a8c43124e91442c9bb1c470499f2dc0",
+        rpc: {
+          1: "https://mainnet.infura.io/v3/",
+        },
+        network: 'mainnet'
       }
     }
   };
