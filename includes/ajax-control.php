@@ -117,30 +117,30 @@ if (file_exists("functions.php")) {
         $CateGoriesArray = array();
         $Catechanneldata = array();
         $Result = $checkLogin;
-        // if ($Result["result"] == "success") {
-        //     if (isset($Result["data"]->user_info->auth)) {
-        //         if ($Result["data"]->user_info->auth != 0) {
-        //             if ($Result["data"]->user_info->status == "Active") {
-        //                 if ($rememberMe == "on") {
-        //                     setcookie("username", $UserName, time() + 2 * 7 * 24 * 60 * 60, "/", $_SERVER["SERVER_NAME"], false);
-        //                     setcookie("userpassword", base64_encode($UserPassword), time() + 2 * 7 * 24 * 60 * 60, "/", $_SERVER["SERVER_NAME"], false);
-        //                 }
-        //                 $SessionArray = array("username" => $Result["data"]->user_info->username, "password" => $Result["data"]->user_info->password, "auth" => $Result["data"]->user_info->auth, "status" => $Result["data"]->user_info->status, "exp_date" => $Result["data"]->user_info->exp_date, "active_cons" => $Result["data"]->user_info->active_cons, "is_trial" => $Result["data"]->user_info->is_trial, "max_connections" => $Result["data"]->user_info->max_connections, "created_at" => $Result["data"]->user_info->created_at, "allowed_output_formats" => $Result["data"]->user_info->allowed_output_formats, "url" => $Result["data"]->server_info->url, "port" => $Result["data"]->server_info->port, "rtmp_port" => $Result["data"]->server_info->rtmp_port, "timezone" => $Result["data"]->server_info->timezone);
-        //                 $_SESSION["webTvplayer"] = $SessionArray;
-        //                 $returnData = array("result" => "success", "message" => $SessionArray);
-        //             } else {
-        //                 $returnData = array("result" => "error", "message" => "Status is " . $Result["data"]->user_info->status);
-        //             }
-        //         } else {
-        //             $returnData = array("result" => "error", "message" => "Invalid Details");
-        //         }
-        //     } else {
-        //         $returnData = array("result" => "error", "message" => "Invalid Details");
-        //     }
-        // } else {
-        //     $returnData = array("result" => "error", "message" => $Result["data"]);
-        // }
-        echo json_encode($Result);
+        if ($Result["result"] == "success") {
+            if (isset($Result["data"]->user_info->auth)) {
+                if ($Result["data"]->user_info->auth != 0) {
+                    if ($Result["data"]->user_info->status == "Active") {
+                        if ($rememberMe == "on") {
+                            setcookie("username", $UserName, time() + 2 * 7 * 24 * 60 * 60, "/", $_SERVER["SERVER_NAME"], false);
+                            setcookie("userpassword", base64_encode($UserPassword), time() + 2 * 7 * 24 * 60 * 60, "/", $_SERVER["SERVER_NAME"], false);
+                        }
+                        $SessionArray = array("username" => $Result["data"]->user_info->username, "password" => $Result["data"]->user_info->password, "auth" => $Result["data"]->user_info->auth, "status" => $Result["data"]->user_info->status, "exp_date" => $Result["data"]->user_info->exp_date, "active_cons" => $Result["data"]->user_info->active_cons, "is_trial" => $Result["data"]->user_info->is_trial, "max_connections" => $Result["data"]->user_info->max_connections, "created_at" => $Result["data"]->user_info->created_at, "allowed_output_formats" => $Result["data"]->user_info->allowed_output_formats, "url" => $Result["data"]->server_info->url, "port" => $Result["data"]->server_info->port, "rtmp_port" => $Result["data"]->server_info->rtmp_port, "timezone" => $Result["data"]->server_info->timezone);
+                        $_SESSION["webTvplayer"] = $SessionArray;
+                        $returnData = array("result" => "success", "message" => $SessionArray);
+                    } else {
+                        $returnData = array("result" => "error", "message" => "Status is " . $Result["data"]->user_info->status);
+                    }
+                } else {
+                    $returnData = array("result" => "error", "message" => "Invalid Details");
+                }
+            } else {
+                $returnData = array("result" => "error", "message" => "Invalid Details");
+            }
+        } else {
+            $returnData = array("result" => "error", "message" => $Result["data"]);
+        }
+        echo json_encode($returnData);
     }
     if (isset($_POST["action"]) && $_POST["action"] == "CheckLicense") {
         $ReturnData = 0;
