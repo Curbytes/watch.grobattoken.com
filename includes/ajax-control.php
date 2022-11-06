@@ -117,6 +117,9 @@ if (file_exists("functions.php")) {
         $CateGoriesArray = array();
         $Catechanneldata = array();
         $Result = $checkLogin;
+
+        echo $Result;
+        
         if ($Result["result"] == "success") {
             if (isset($Result["data"]->user_info->auth)) {
                 if ($Result["data"]->user_info->auth != 0) {
