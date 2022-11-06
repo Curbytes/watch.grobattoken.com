@@ -15,15 +15,15 @@ let selectedAccount;
 
 function init() {
   var providerOptions = {
-    walletconnect: {
-      package: WalletConnectProvider,
-      options: {
-        rpc: {
-          1: "https://mainnet.infura.io/v3/",
-        },
-        network: 'mainnet'
-      }
-    }
+    // walletconnect: {
+    //   package: WalletConnectProvider,
+    //   options: {
+    //     rpc: {
+    //       1: "https://mainnet.infura.io/v3/",
+    //     },
+    //     network: 'mainnet'
+    //   }
+    // }
   };
 
   web3Modal = new Web3Modal({
