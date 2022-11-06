@@ -28,6 +28,8 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
     if (curl_exec($ch) === false) {
         return array("result" => "error", "data" => "Invalid Host Url");
     }
