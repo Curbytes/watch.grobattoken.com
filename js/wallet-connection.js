@@ -18,10 +18,7 @@ function init() {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-        rpc: {
-          56: "https://bsc-dataseed.binance.org",
-        },
-        network: 'binance'
+        infuraId: "0a8c43124e91442c9bb1c470499f2dc0",
       }
     }
   };
