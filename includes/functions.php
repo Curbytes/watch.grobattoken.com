@@ -54,7 +54,6 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
         $returnData = $Result;
         return array("result" => "success", "data" => $returnData);
     }
-    curl_close($curl);
 
     return array("result" => "error");
 }
