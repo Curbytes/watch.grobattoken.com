@@ -24,6 +24,7 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
     $returnData = "0";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $ApiLinkIs);
+    curl_setopt($ch, CURLOPT_COOKIESESSION, true);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
