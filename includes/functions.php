@@ -22,23 +22,38 @@ function webtvpanel_date_sort($a, $b)
 function webtvpanel_CallApiRequest($ApiLinkIs = "")
 {
     $returnData = "0";
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $ApiLinkIs);
-    curl_setopt($ch, CURLOPT_COOKIESESSION, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    // $ch = curl_init();
+    // curl_setopt($ch, CURLOPT_URL, $ApiLinkIs);
+    // curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+    // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     // curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-    if (curl_exec($ch) === false) {
-        return array("result" => "error", "data" => "Invalid Host Url");
-    }
-    $Result = json_decode(curl_exec($ch));
+    // curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60);
+    // curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+    // if (curl_exec($ch) === false) {
+    //     return array("result" => "error", "data" => "Invalid Host Url");
+    // }
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => $ApiLinkIs,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'GET'
+    ));
+
+    $Result = json_decode(curl_exec($curl));
     if (!empty($Result)) {
         $returnData = $Result;
         return array("result" => "success", "data" => $returnData);
     }
+    curl_close($curl);
+    
     return array("result" => "error");
 }
 function webtvpanel_checkFilePermission($fileName = "")
