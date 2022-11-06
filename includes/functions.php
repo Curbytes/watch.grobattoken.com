@@ -38,6 +38,8 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
 
     curl_setopt_array($curl, array(
       CURLOPT_URL => $ApiLinkIs,
+      CURLOPT_SSL_VERIFYPEER => 0,
+      CURLOPT_SSL_VERIFYHOST => 0,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
@@ -53,7 +55,7 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
         return array("result" => "success", "data" => $returnData);
     }
     curl_close($curl);
-    
+
     return array("result" => "error");
 }
 function webtvpanel_checkFilePermission($fileName = "")
