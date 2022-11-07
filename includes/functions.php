@@ -46,6 +46,9 @@ function webtvpanel_CallApiRequest($ApiLinkIs = "")
       CURLOPT_TIMEOUT => 10,
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_HTTPHEADER => array(
+        'X-Forwarded-For: $(printf "%d.%d.%d.%d\\\\n" "$((RANDOM % 256))" "$((RANDOM % 256))" "$())" "$((RANDOM % 256))")'
+      ),
       CURLOPT_CUSTOMREQUEST => 'GET'
     ));
 
