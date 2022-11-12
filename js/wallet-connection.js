@@ -215,17 +215,17 @@ async function onDisconnect() {
   selectedAccount = null;
 }
 
-// window.addEventListener('load', async () => {
-//   init();
-//   onConnect();
+window.addEventListener('load', async () => {
+  init();
+  onConnect();
 
   
-//   $("#connectButton").on("click", function(){
-//     onConnect();
-//   });
+  $("#connectButton").on("click", function(){
+    onConnect();
+  });
 
-//   $("#disconnectButton").on("click", function(){
-//     onDisconnect();
-//   });
-// });
+  $("#disconnectButton").on("click", function(){
+    onDisconnect();
+  });
+});
 

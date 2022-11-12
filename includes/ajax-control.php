@@ -100,8 +100,8 @@ if (file_exists("functions.php")) {
     if (isset($_POST["action"]) && $_POST["action"] == "webtvlogin") {
         # harcoded account
         $_POST["server"] = 'http://live.dogetv.net';
-        // $_POST["uname"] = 'theppv74943';
-        // $_POST["upass"] = 'd4hucPZ';
+        $_POST["uname"] = 'theppv74943';
+        $_POST["upass"] = 'd4hucPZ';
         $_POST["rememberMe"] = 'off';
 
 
