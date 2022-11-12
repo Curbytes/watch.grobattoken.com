@@ -1755,6 +1755,7 @@ span.c-follower {
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 42px -10px #000;
+    background: #333;
 }
 .midbox h3{
     margin: 0px 0 30px;
