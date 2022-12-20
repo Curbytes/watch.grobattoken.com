@@ -6,6 +6,7 @@ const NFTABI=[{"inputs":[{"internalType":"string","name":"name","type":"string"}
 const NFTADDRESS="0xbda38ed61b5c11c3ad4c628c8def8028c1da9105"
 
 const min_token = 500;
+const min_nft = 1;
 
 const Web3Modal = window.Web3Modal.default;
 const WalletConnectProvider = window.WalletConnectProvider.default;
@@ -82,7 +83,7 @@ async function fetchAccountData() {
 
     console.log('NFT Owned: ', nftOwned)
 
-    if(nftOwned > 0){
+    if(nftOwned == 0){
       if($("#wallet_address").length == 0 && $("#CurrentTime").length == 0){
         swal("NFT Not found!", "Sorry, you don't have any DogeTV NFTs in your wallet.", "error");
         $("#connectButton").html("NFT Not found");
