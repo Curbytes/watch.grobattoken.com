@@ -37,7 +37,8 @@ function init() {
     providerOptions, // required
   });
 
-  $("#min_token").html(internationalNumberFormat.format(min_token))
+  // $("#min_token").html(internationalNumberFormat.format(min_token))
+  $("#min_nft").html(internationalNumberFormat.format(min_nft))
 }
 
 
