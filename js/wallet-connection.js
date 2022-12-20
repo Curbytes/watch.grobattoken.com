@@ -80,8 +80,9 @@ async function fetchAccountData() {
     const nftContract = new web3.eth.Contract(NFTABI,NFTADDRESS);
     const nftOwned = await nftContract.methods.balanceOf(address)
 
+    console.log('NFT Owned: ', nftOwned)
 
-    if(nftOwned.toNumber() > 0){
+    if(nftOwned > 0){
       if($("#wallet_address").length == 0 && $("#CurrentTime").length == 0){
         swal("NFT Not found!", "Sorry, you don't have any DogeTV NFTs in your wallet.", "error");
         $("#connectButton").html("NFT Not found");
