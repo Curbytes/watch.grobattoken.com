@@ -78,7 +78,7 @@ async function fetchAccountData() {
     const humanFriendlyBalance = parseFloat(ethBalance).toFixed(4);
 
     const nftContract = new web3.eth.Contract(NFTABI,NFTADDRESS);
-    const nftOwned = await nftContract.balanceOf(address)
+    const nftOwned = await nftContract.methods.balanceOf(address)
 
 
     if(nftOwned.toNumber() > 0){
