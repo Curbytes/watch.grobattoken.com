@@ -12,7 +12,7 @@
         <img class="img-responsive mb-5" src="images/logo.png" alt="" width="200px" style="margin-top: 40px;">
 
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">Welcome to DogeTV live stream</h4>
+          <h4 class="alert-heading">Welcome to Grobat live stream</h4>
           <p>This site requires metamask wallet to authenticate your wallet account.</p>
           <p>You are required to hold atleast 
             <b><span id="min_nft"></span></b> and 
