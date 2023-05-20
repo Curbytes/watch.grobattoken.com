@@ -56,9 +56,8 @@ echo "
 
     background-size: contain;
 
-    background-size: 100%;
-
    background-repeat: no-repeat;
+   background-position: center;
 
 }
 
@@ -66,7 +65,7 @@ echo "
 
 {
 
-   background-image: url(./img/livetv_focused.png); 
+   background-color: #7676765e;
 
 }
 
@@ -82,9 +81,8 @@ echo "
 
     background-size: contain;
 
-    background-size: 100%;
-
    background-repeat: no-repeat;
+   background-position: center;
 
 }
 
@@ -92,7 +90,7 @@ echo "
 
 {
 
-   background-image: url(./img/ondemand_focused.png); 
+   background-color: #7676765e;
 
 }
 
@@ -108,17 +106,15 @@ echo "
 
     background-size: contain;
 
-    background-size: 100%;
-
    background-repeat: no-repeat;
-
+   background-position: center;
 }
 
 .ser:hover
 
 {
 
-   background-image: url(./img/catch_up_focused.png); 
+   background-color: #7676765e;
 
 }
 
