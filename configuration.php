@@ -7,5 +7,5 @@ $XCcontactUslinkval = "";
 $XChelpLinkval = "";
 $XClicenseIsval = "8nulled8";
 $XClocalKey = "";
-$XCsitetitleval = "DogeTV";
+$XCsitetitleval = "Grobat";
 ?>

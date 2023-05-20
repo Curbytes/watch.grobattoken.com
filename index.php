@@ -14,7 +14,10 @@
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading">Welcome to DogeTV live stream</h4>
           <p>This site requires metamask wallet to authenticate your wallet account.</p>
-          <p>You are required to hold atleast <b><span id="min_nft"></span> NFT</b> to access this site.</p>
+          <p>You are required to hold atleast 
+            <b><span id="min_nft"></span></b> and 
+            <b><span id="min_token"></span> <span id="token_symbol"></span></b> to access this site.
+          </p>
         </div>
 
         <button type='button' class='btn btn-lg btn-success' id='connectButton'>Connect Wallet</button>
