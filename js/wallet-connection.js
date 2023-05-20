@@ -55,10 +55,10 @@ async function fetchAccountData() {
 
   selectedAccount = accounts[0];
 
-  if(chainId != 1 && chainId != 5){
+  if(chainId != 56){
     swal({
       title: "Invalid Network!",
-      text: "Please connect to Ethereum Mainnet to continue.",
+      text: "Please connect to BSC Mainnet to continue.",
       icon: "error",
       button: false,
       closeOnClickOutside: false
